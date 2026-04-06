@@ -36,17 +36,23 @@ Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
 
 ## Demo
 
-```
-✓ Claude Code session ended (4m 32s)
-─────────────────────────────────
-  (^.^)
- /|   |\  Pulse · lv.7 · Hatchling · 🔥 4-day streak
-  d   b
+Pulse lives in your **status bar** — visible during every message, not just after the session.
 
-"That's session 3 today. You've been coding
- for 4h 12m. Drink some water before the
- next one? 💧"
-─────────────────────────────────
+![Pulse demo](demo.svg)
+
+```
+Sonnet 4.6  ████░░░░ 23%  1h13m today  $0.12
+💓 (^.^)  lv.7 · Hatchling  🔥4d  "You're on a roll. I'll stay quiet 🤫"
+```
+
+```
+Sonnet 4.6  ████████ 85%  3h42m today  $2.50
+💓 (>.<)  lv.7 · Hatchling  🔥4d  "Drink some water before the next one. 💧"
+```
+
+```
+Sonnet 4.6  █░░░░░░░ 12%  0m today  $0.02
+💓 (o.o)  lv.1 · Egg  "Hi. I'm Pulse. I'll be watching. 👀"
 ```
 
 ```
