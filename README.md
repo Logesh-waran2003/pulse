@@ -135,7 +135,7 @@ Mood changes based on context: happy, excited, sleepy, worried, proud.
 
 ## Why it's different from Crumpet
 
-Anthropic shipped `/buddy` (Crumpet) for April Fools — a cute creature that watches you code inside Claude Code.
+Anthropic shipped `/buddy` for April Fools — a cute creature that watches you code inside Claude Code.
 
 Pulse goes further:
 - Works across **all** your sessions, not just the current one
