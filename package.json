@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A terminal companion for Claude Code. Lives in your status bar, watches all sessions, talks to you like a friend.",
   "bin": {
-    "pulse-dev": "./install.js"
+    "pulse-dev": "install.js"
   },
   "files": [
     "install.js",
@@ -14,7 +14,15 @@
     "install-local": "node install.js",
     "uninstall-local": "node uninstall.js"
   },
-  "keywords": ["claude", "claude-code", "terminal", "companion", "developer-tools", "statusline", "productivity"],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "terminal",
+    "companion",
+    "developer-tools",
+    "statusline",
+    "productivity"
+  ],
   "author": "logesh-kumar",
   "license": "MIT",
   "engines": {
