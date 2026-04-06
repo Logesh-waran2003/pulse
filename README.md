@@ -16,7 +16,15 @@ npx pulse-dev install
 
 ## What it does
 
-- 🕐 **Watches all your sessions** — knows how long you've been coding today
+Pulse lives in Claude Code's **status bar** — always visible, every session.
+
+```
+Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
+💓 (^.^)  lv.7 · Hatchling  🔥4d  "You're on a roll. I'll stay quiet 🤫"
+```
+
+- 💓 **Lives in your status bar** — visible during every session, not just after
+- 🕐 **Watches ALL your sessions** — knows you've been coding 4 hours today
 - 💧 **Tells you to drink water** after 2+ hours without a break
 - 🎉 **Celebrates when your agent finishes** — "Come take a look 👀"
 - 🌙 **Says close the laptop** when it's 1am
