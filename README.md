@@ -56,15 +56,8 @@ Sonnet 4.6  █░░░░░░░ 12%  0m today  $0.02
 ```
 
 ```
-● Subagent finished
-─────────────────────────────────
-  (^o^)
- /|   |\  Pulse · lv.7 · Hatchling
-  d   b
-
-"Done! Go review it before you forget
- what you asked for. 👀"
-─────────────────────────────────
+Sonnet 4.6  ████░░░░ 45%  2h10m today  $0.55
+💓 (^o^)  lv.7 · Hatchling  🔥4d  "Your agent finished! Go take a look 👀"
 ```
 
 ---
