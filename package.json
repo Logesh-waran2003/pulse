@@ -1,0 +1,23 @@
+{
+  "name": "pulse-dev",
+  "version": "0.1.0",
+  "description": "A terminal companion for Claude Code users. Watches your sessions, tracks patterns, talks to you like a friend.",
+  "bin": {
+    "pulse-dev": "./install.js"
+  },
+  "files": [
+    "install.js",
+    "uninstall.js",
+    "pulse/"
+  ],
+  "scripts": {
+    "install-local": "node install.js",
+    "uninstall-local": "node uninstall.js"
+  },
+  "keywords": ["claude", "claude-code", "terminal", "companion", "developer-tools"],
+  "author": "logesh-kumar",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  }
+}
