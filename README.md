@@ -38,8 +38,6 @@ Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
 
 Pulse lives in your **status bar** — visible during every message, not just after the session.
 
-![Pulse demo](demo.svg)
-
 ```
 Sonnet 4.6  ████░░░░ 23%  1h13m today  $0.12
 💓 (^.^)  lv.7 · Hatchling  🔥4d  "You're on a roll. I'll stay quiet 🤫"
@@ -133,16 +131,17 @@ Mood changes based on context: happy, excited, sleepy, worried, proud.
 
 ---
 
-## Why it's different from Crumpet
+## Why it's different from /buddy
 
-Anthropic shipped `/buddy` for April Fools — a cute creature that watches you code inside Claude Code.
+Anthropic shipped `/buddy` for April Fools — 18 species, gacha rarity, hats, chaos/wisdom stats. A fun easter egg buried in the code.
 
-Pulse goes further:
-- Works across **all** your sessions, not just the current one
-- Has **cross-session memory** — knows you've been coding 4 hours today
-- Gives **health nudges** — water, sleep, breaks
-- **Alerts you** when agents finish
+Pulse is different:
+- **Lives in the status bar** — always visible, not a hidden easter egg
+- **Cross-session memory** — knows you've been coding 4 hours today
+- **Health nudges** — water, sleep, breaks
+- **Agent alerts** — notifies when your subagent finishes
 - **Evolves** based on your coding habits
+- **Configurable personas** — caring, hype, zen, silent
 
 ---
 
