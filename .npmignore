@@ -1,7 +1,6 @@
-pulse/__pycache__/
-pulse/**/__pycache__/
-**/*.pyc
-**/*.pyo
+**/__pycache__/**
+*.pyc
+*.pyo
 .DS_Store
 *.cast
 .superpowers/
