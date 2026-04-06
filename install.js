@@ -111,6 +111,24 @@ function injectStatusLine() {
   ok("Pulse set as statusLine in ~/.claude/settings.json");
 }
 
+// Create default config.json if not exists
+function createDefaultConfig() {
+  const configPath = path.join(PULSE_DIR, "config.json");
+  if (!fs.existsSync(configPath)) {
+    const defaultConfig = {
+      persona: "adaptive",
+      show_cost: true,
+      show_duration: true,
+      show_streak: true,
+      show_level: true,
+      show_message: true,
+      creature_name: "Pulse"
+    };
+    fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2));
+    ok("Created ~/.pulse/config.json (edit to customize)");
+  }
+}
+
 // Init the DB and print welcome
 function initAndWelcome() {
   spawnSync("python3", [path.join(PULSE_DIR, "run.py"), "session-start", "--session-id", "install"], {
@@ -137,4 +155,5 @@ checkPython();
 copyFiles();
 injectHooks();
 injectStatusLine();
+createDefaultConfig();
 initAndWelcome();
