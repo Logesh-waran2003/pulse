@@ -22,11 +22,11 @@ MOODS = {
 }
 
 LEVELS = [
-    (1,  3,  "Egg",       "egg"),
-    (4,  9,  "Hatchling", "happy"),
-    (10, 19, "Companion", "excited"),
-    (20, 29, "Veteran",   "proud"),
-    (30, 99, "Legend",    "proud"),
+    (1,   10,  "Egg",       "egg"),
+    (11,  30,  "Hatchling", "happy"),
+    (31,  75,  "Companion", "excited"),
+    (76,  150, "Veteran",   "proud"),
+    (151, 999, "Legend",    "proud"),
 ]
 
 FACES = {
@@ -44,7 +44,7 @@ def _get_level_info(level: int) -> tuple[str, str]:
     """Returns (tier_name, default_mood) for a given level."""
     for lo, hi, name, mood in LEVELS:
         if lo <= level <= hi:
-            if level >= 30:
+            if level >= 151:
                 return name, "legend"
             return name, mood
     return "Legend", "legend"

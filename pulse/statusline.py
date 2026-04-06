@@ -120,7 +120,7 @@ def get_frame(mood_data: dict) -> tuple[str, str]:
     heart = HEARTS[frame]
     return face, heart
 
-LEVEL_NAMES = [(1,3,"Egg"),(4,9,"Hatchling"),(10,19,"Companion"),(20,29,"Veteran"),(30,99,"Legend")]
+LEVEL_NAMES = [(1,10,"Egg"),(11,30,"Hatchling"),(31,75,"Companion"),(76,150,"Veteran"),(151,999,"Legend")]
 
 def get_level_name(level):
     for lo, hi, name in LEVEL_NAMES:

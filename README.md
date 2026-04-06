@@ -120,11 +120,11 @@ Edit `~/.pulse/config.json` to customize:
 ## The creature
 
 ```
-Lv 1–3   (o.o)  Egg
-Lv 4–9   (^.^)  Hatchling
-Lv 10–19 (^o^)  Companion
-Lv 20–29 (★.★)  Veteran
-Lv 30+   (⊙_⊙)  Legend
+Lv 1–10    (o.o)  Egg         first week
+Lv 11–30   (^.^)  Hatchling   2–3 weeks
+Lv 31–75   (^o^)  Companion   1–2 months
+Lv 76–150  (★.★)  Veteran     3–6 months
+Lv 151+    (⊙_⊙)  Legend      6+ months
 ```
 
 Mood changes based on context: happy, excited, sleepy, worried, proud.

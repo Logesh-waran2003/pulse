@@ -88,7 +88,18 @@ def get_context(session_id: str = None, duration_seconds: int = 0) -> dict:
         ).fetchone()[0]
 
     total_sessions = int(get_state("total_sessions", "0"))
-    level = min(max(total_sessions // 5 + 1, 1), 30)
+    # Level progression based on total sessions
+    # Egg: 1-10, Hatchling: 11-30, Companion: 31-75, Veteran: 76-150, Legend: 151+
+    if total_sessions <= 10:
+        level = total_sessions if total_sessions > 0 else 1
+    elif total_sessions <= 30:
+        level = 10 + (total_sessions - 10)
+    elif total_sessions <= 75:
+        level = 30 + (total_sessions - 30)
+    elif total_sessions <= 150:
+        level = 75 + (total_sessions - 75)
+    else:
+        level = 150 + min(total_sessions - 150, 849)
 
     # Streak
     last_session_date = get_state("last_session_date", "")
