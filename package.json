@@ -1,6 +1,6 @@
 {
   "name": "pulse-dev",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A terminal companion for Claude Code. Lives in your status bar, watches all sessions, talks to you like a friend.",
   "bin": {
     "pulse-dev": "install.js"
