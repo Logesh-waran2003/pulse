@@ -38,6 +38,8 @@ Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
 
 Pulse lives in your **status bar** — visible during every message, not just after the session.
 
+[![Demo](https://asciinema.org/a/BvzkDmh2UN81PZt0.svg)](https://asciinema.org/a/BvzkDmh2UN81PZt0)
+
 ```
 Sonnet 4.6  ████░░░░ 23%  1h13m today  $0.12
 💓 (^.^)  lv.7 · Hatchling  🔥4d  "You're on a roll. I'll stay quiet 🤫"
