@@ -80,16 +80,43 @@ npx pulse-dev uninstall
 
 ## How it works
 
-Pulse hooks into Claude Code's event system:
+Pulse has two parts:
+
+**1. Status bar** — `statusLine` script runs after every assistant message, shows your creature live.
+
+**2. Session hooks** — track sessions, log time, trigger alerts.
 
 | Event | What Pulse does |
 |---|---|
 | `SessionStart` | Logs session start |
 | `UserPromptSubmit` | Tracks activity |
-| `Stop` | Logs duration, maybe speaks |
-| `SubagentStop` | Always alerts you |
+| `Stop` | Logs duration, updates creature |
+| `SubagentStop` | Triggers excited creature alert |
 
-All data stays local in `~/.pulse/pulse.db`. Pulse uses a Claude subagent (your existing subscription) to generate messages — no extra API keys needed.
+All data stays local in `~/.pulse/pulse.db`. No API keys. No external services.
+
+## Configure
+
+Edit `~/.pulse/config.json` to customize:
+
+```json
+{
+  "persona": "adaptive",
+  "show_cost": true,
+  "show_duration": true,
+  "show_streak": true,
+  "show_level": true,
+  "show_message": true,
+  "creature_name": "Pulse"
+}
+```
+
+**Personas:**
+- `adaptive` — reads the room, adjusts tone (default)
+- `caring` — warm, nurturing, like a friend who checks in
+- `hype` — energetic, celebrates wins, roasts procrastination
+- `zen` — calm, observational, minimal
+- `silent` — creature only, no messages
 
 ---
 
