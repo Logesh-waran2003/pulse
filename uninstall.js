@@ -29,6 +29,19 @@ function removeHooks() {
   ok("Removed hooks from ~/.claude/settings.json");
 }
 
+function removeStatusLine() {
+  if (!fs.existsSync(CLAUDE_SETTINGS)) return;
+  let settings;
+  try { settings = JSON.parse(fs.readFileSync(CLAUDE_SETTINGS, "utf8")); }
+  catch { return; }
+
+  if (settings.statusLine && settings.statusLine.command && settings.statusLine.command.includes("pulse")) {
+    delete settings.statusLine;
+    fs.writeFileSync(CLAUDE_SETTINGS, JSON.stringify(settings, null, 2));
+    ok("Removed Pulse statusLine from ~/.claude/settings.json");
+  }
+}
+
 function removeFiles() {
   if (fs.existsSync(PULSE_DIR)) {
     fs.rmSync(PULSE_DIR, { recursive: true, force: true });
@@ -38,5 +51,6 @@ function removeFiles() {
 
 console.log("\n  💓 Pulse uninstaller\n");
 removeHooks();
+removeStatusLine();
 removeFiles();
 console.log("\n  Pulse has been removed. Goodbye 👋\n");

@@ -40,7 +40,7 @@ function copyFiles() {
   fs.mkdirSync(path.join(PULSE_DIR, "hooks"), { recursive: true });
 
   const files = [
-    "db.py", "creature.py", "generate.py", "run.py",
+    "db.py", "creature.py", "generate.py", "run.py", "statusline.py",
     "hooks/on-stop.sh", "hooks/on-agent-stop.sh",
     "hooks/on-session-start.sh", "hooks/on-prompt.sh",
   ];
@@ -88,6 +88,29 @@ function injectHooks() {
   ok("Hooks injected into ~/.claude/settings.json");
 }
 
+// Inject statusLine into settings.json
+function injectStatusLine() {
+  let settings = {};
+  if (fs.existsSync(CLAUDE_SETTINGS)) {
+    try { settings = JSON.parse(fs.readFileSync(CLAUDE_SETTINGS, "utf8")); }
+    catch { }
+  }
+
+  const existing = settings.statusLine;
+  if (existing && existing.command && !existing.command.includes("pulse")) {
+    warn(`Replacing existing statusLine: ${existing.command}`);
+  }
+
+  settings.statusLine = {
+    type: "command",
+    command: `python3 ${PULSE_DIR}/statusline.py`,
+    padding: 0,
+  };
+
+  fs.writeFileSync(CLAUDE_SETTINGS, JSON.stringify(settings, null, 2));
+  ok("Pulse set as statusLine in ~/.claude/settings.json");
+}
+
 // Init the DB and print welcome
 function initAndWelcome() {
   spawnSync("python3", [path.join(PULSE_DIR, "run.py"), "session-start", "--session-id", "install"], {
@@ -113,4 +136,5 @@ console.log("");
 checkPython();
 copyFiles();
 injectHooks();
+injectStatusLine();
 initAndWelcome();
