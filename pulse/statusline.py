@@ -101,14 +101,24 @@ PERSONAS["adaptive"] = PERSONAS["caring"]
 
 # ── MOODS ─────────────────────────────────────────────────────────────────────
 MOODS = {
-    "happy":   {"face": "(^.^)", "color": "blue"},
-    "excited": {"face": "(^o^)", "color": "green"},
-    "sleepy":  {"face": "(-_-)", "color": "yellow"},
-    "worried": {"face": "(>.<)", "color": "orange"},
-    "proud":   {"face": "(^_^)", "color": "purple"},
-    "egg":     {"face": "(o.o)", "color": "gray"},
-    "hype":    {"face": "(★o★)", "color": "cyan"},
+    "happy":   {"frames": ["(^.^)", "(^-^)", "(^.^)", "(^~^)"], "color": "blue"},
+    "excited": {"frames": ["(^o^)", "(★o★)", "(^o^)", "(>o<)"], "color": "green"},
+    "sleepy":  {"frames": ["(-_-)", "(-.-)", "(-_-)", "(-.-)"], "color": "yellow"},
+    "worried": {"frames": ["(>.<)", "(>.>)", "(>.<)", "(<.<)"], "color": "orange"},
+    "proud":   {"frames": ["(^_^)", "(★_★)", "(^_^)", "(✿_✿)"], "color": "purple"},
+    "egg":     {"frames": ["(o.o)", "(o_o)", "(o.o)", "(.o.)"], "color": "gray"},
+    "hype":    {"frames": ["(★o★)", "(^o^)", "(★o★)", "(>o<)"], "color": "cyan"},
 }
+
+HEARTS = ["💓", "🩷", "💓", "❤️"]
+
+def get_frame(mood_data: dict) -> tuple[str, str]:
+    """Return (face, heart) for current time-based frame."""
+    import time
+    frame = int(time.time() * 0.4) % 4
+    face = mood_data["frames"][frame]
+    heart = HEARTS[frame]
+    return face, heart
 
 LEVEL_NAMES = [(1,3,"Egg"),(4,9,"Hatchling"),(10,19,"Companion"),(20,29,"Veteran"),(30,99,"Legend")]
 
@@ -177,9 +187,9 @@ def main():
     today_min = ctx.get("total_time_today_minutes", 0)
 
     mood      = detect_mood(ctx, hour)
-    mood_data = MOODS.get(mood, MOODS["happy"])
-    color     = C[mood_data["color"]]
-    face      = mood_data["face"]
+    mood_data  = MOODS.get(mood, MOODS["happy"])
+    color      = C[mood_data["color"]]
+    face, heart = get_frame(mood_data)
     level_name = get_level_name(level)
 
     persona = cfg.get("persona", "adaptive")
@@ -201,7 +211,7 @@ def main():
 
     # ── Line 2: creature ─────────────────────────────────────────────────────
     name = cfg.get("creature_name", "Pulse")
-    line2_parts = [f"{C['pink']}💓{C['reset']} {color}{face}{C['reset']}"]
+    line2_parts = [f"{C['pink']}{heart}{C['reset']} {color}{face}{C['reset']}"]
 
     if cfg.get("show_level"):
         line2_parts.append(f"{C['dim']}lv.{level} · {level_name}{C['reset']}")
