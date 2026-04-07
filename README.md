@@ -38,7 +38,7 @@ Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
 
 Pulse lives in your **status bar** — visible during every message, not just after the session.
 
-[![Demo](https://asciinema.org/a/BvzkDmh2UN81PZt0.svg)](https://asciinema.org/a/BvzkDmh2UN81PZt0)
+![Pulse demo](demo.gif)
 
 ```
 Sonnet 4.6  ████░░░░ 23%  1h13m today  $0.12
