@@ -26,7 +26,7 @@ npx pulse-dev install
 Pulse lives in Claude Code's **status bar** — always visible, every session.
 
 ```
-Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
+Sonnet 4.6  ████░░░░ 57%  2h42m today  $0.88
 💓 (^.^)  lv.7 · Hatchling  🔥4d  "You're on a roll. I'll stay quiet 🤫"
 ```
 
@@ -158,11 +158,14 @@ Pulse is different:
 
 ## Contributing
 
-PRs welcome for:
-- New creature designs
-- New personality modes
+PRs welcome! Open an issue first to discuss what you'd like to change.
+
+Ideas:
+- New creature designs and ASCII art
+- New personality modes / personas
 - Windows support
 - Additional hook events
+- Custom level thresholds
 
 ---
 
