@@ -4,11 +4,18 @@
 
 **Your terminal has a heartbeat now.**
 
-A companion for Claude Code that watches all your sessions, tracks your patterns, and talks to you like a caring friend — not a productivity tool.
+[![npm version](https://img.shields.io/npm/v/pulse-dev.svg)](https://www.npmjs.com/package/pulse-dev)
+[![npm downloads](https://img.shields.io/npm/dm/pulse-dev.svg)](https://www.npmjs.com/package/pulse-dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Logesh-waran2003/pulse?style=social)](https://github.com/Logesh-waran2003/pulse)
 
-```
+A companion for Claude Code that watches **all** your sessions, tracks your patterns, and talks to you like a caring friend — not a productivity tool.
+
+```bash
 npx pulse-dev install
 ```
+
+*Requires Python 3.8+ and Claude Code*
 
 </div>
 
@@ -28,15 +35,13 @@ Sonnet 4.6  ████░░░░ 57%  2h42m  $0.88
 - 💧 **Tells you to drink water** after 2+ hours without a break
 - 🎉 **Celebrates when your agent finishes** — "Come take a look 👀"
 - 🌙 **Says close the laptop** when it's 1am
-- 📈 **Grows as you code** — levels up from Egg → Hatchling → Companion → Legend
+- 📈 **Grows as you code** — Egg → Hatchling → Companion → Veteran → Legend
 
 **Uses your existing Claude subscription. Zero extra cost. Zero extra API keys.**
 
 ---
 
 ## Demo
-
-Pulse lives in your **status bar** — visible during every message, not just after the session.
 
 ![Pulse demo](demo.gif)
 
@@ -62,13 +67,17 @@ Sonnet 4.6  ████░░░░ 45%  2h10m today  $0.55
 
 ---
 
+## Requirements
+
+- **Claude Code** — [install here](https://claude.ai/code)
+- **Python 3.8+** — `python3 --version` to check
+- **macOS or Linux** (Windows support coming)
+
 ## Install
 
 ```bash
 npx pulse-dev install
 ```
-
-Requires: Python 3.8+ and Claude Code.
 
 **Uninstall:**
 ```bash
